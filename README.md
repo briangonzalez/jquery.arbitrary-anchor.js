@@ -1,6 +1,10 @@
 ## jquery.arbitrary-anchor.js
 
-This plugin allows the page to scroll to any arbitrary object on the page base on jQuery/CSS selector.
+This plugin allows the page to scroll to any arbitrary object on the page base on jQuery/CSS selector. 
+
+## On the web
+
+Visit us at [http://briangonzalez.org/arbitrary-anchor](http://briangonzalez.org/arbitrary-anchor)
 
 ### Usage
 
