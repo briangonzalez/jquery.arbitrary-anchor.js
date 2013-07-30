@@ -43,13 +43,13 @@
     // Store the arbitrary anchor element.
     var $arbitraryAnchor  = $(hash).first();
     if ( $arbitraryAnchor && $arbitraryAnchor.length > 0 ) {
-      $el = $arbitraryAnchor;      
+      var $el = $arbitraryAnchor;      
     } else {
       return;
     }
 
     // Scroll to $el
-    if ( $el.length > 0 ) {
+    if ( $el && $el.length > 0 ) {
       var top = $el.offset().top;
       $body.animate({ scrollTop: top }, 750)
     }
