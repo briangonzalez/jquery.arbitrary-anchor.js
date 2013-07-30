@@ -1,5 +1,13 @@
 ;(function(window, $){
 
+  // Copyright Brian Gonzalez - 2013
+  // jquery.arbitrary-anchor.js
+  // Arbitrary anchors for any element on your page using a little jQuery magic.
+  // briangonzalez.org
+  // @brianmgonzalez
+
+  "use strict";
+
   var $window, $document, $body;
   var animationLength = 750;
 
@@ -32,7 +40,7 @@
     if ( ($actualAnchor && $actualAnchor.length > 0) || ($actualID && $actualID.length > 0) )
       return;
 
-    // Store the arbitrary 
+    // Store the arbitrary anchor element.
     var $arbitraryAnchor  = $(hash).first();
     if ( $arbitraryAnchor && $arbitraryAnchor.length > 0 ) {
       $el = $arbitraryAnchor;      
