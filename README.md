@@ -2,7 +2,7 @@
 
 This plugin allows the page to scroll to any arbitrary object on the page base on jQuery/CSS selector.
 
-## Usage
+### Usage
 
 Usage is simple. Just drop it into your page's `head` after jQuery is loaded. Then it just works.
 
@@ -10,7 +10,7 @@ Usage is simple. Just drop it into your page's `head` after jQuery is loaded. Th
   <script type="text/javascript" src="../jquery.arbitrary-anchor.js"></script>
 ```
 
-# Example URLs
+### Example URLs
 
  URL                           | Scrolls To                                                                              
 -------------------------------|-----------------------------------------------------------------------------------------
