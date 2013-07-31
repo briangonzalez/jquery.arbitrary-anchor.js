@@ -1,10 +1,6 @@
-## jquery.arbitrary-anchor.js
+## [jquery.arbitrary-anchor.js](http://briangonzalez.org/arbitrary-anchor)
 
 This plugin allows the page to scroll to any arbitrary object on the page based on jQuery/CSS selector. 
-
-## On the web
-
-Visit us at [http://briangonzalez.org/arbitrary-anchor](http://briangonzalez.org/arbitrary-anchor)
 
 ### Usage
 
@@ -30,4 +26,9 @@ If the selector returns more than 1 element, the first element found will be scr
  `http://example.com#.brah`    | first element with class of `brah`                                                      
  `http://example.com#.sup.brah`| first element with class of `sup` and `brah`                                            
  `http://example.com#footer`   | element with ID of or anchor with name of footer, or first `footer`  
+ 
+ 
+### On the web
+
+Visit us at [http://briangonzalez.org/arbitrary-anchor](http://briangonzalez.org/arbitrary-anchor)
  
