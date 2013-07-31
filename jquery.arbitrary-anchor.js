@@ -3,7 +3,7 @@
   // Copyright Brian Gonzalez - 2013
   // jquery.arbitrary-anchor.js
   // Arbitrary anchors for any element on your page using a little jQuery magic.
-  // briangonzalez.org
+  // briangonzalez.org/arbitrary-anchor
   // @brianmgonzalez
 
   "use strict";
