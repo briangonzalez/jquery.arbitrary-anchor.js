@@ -8,7 +8,7 @@ Visit us at [http://briangonzalez.org/arbitrary-anchor](http://briangonzalez.org
 
 ### Usage
 
-Usage is simple. Just drop it into your page's `head` after jQuery is loaded. Then it just works.
+Usage is simple. Just drop it into your page's `head` after jQuery. Then it just works.
 
 __Add to your page:__
 ```html
