@@ -20,14 +20,16 @@ If the selector returns more than 1 element, the first element found will be scr
 
 ### Example URLs
 
- URL                           | Scrolls To                                                                              
--------------------------------|-----------------------------------------------------------------------------------------
- `http://example.com#raptor`   | element with ID of or anchor with name of raptor                                        
- `http://example.com#p`        | element with ID of or anchor with name of raptor, if none, scroll to first `<p>`        
- `http://example.com##yo-man`  | first element with ID of `yo-man`                                                       
- `http://example.com#.brah`    | first element with class of `brah`                                                      
- `http://example.com#.sup.brah`| first element with class of `sup` and `brah`                                            
- `http://example.com#footer`   | element with ID of or anchor with name of footer, or first `footer`  
+ URL                                | Scrolls To                                                                              
+------------------------------------|-----------------------------------------------------------------------------------------
+ `http://example.com#raptor`        | element with ID of or anchor with name of raptor                                        
+ `http://example.com#p`             | element with ID of or anchor with name of raptor, if none, scroll to first `<p>`        
+ `http://example.com##yo-man`       | first element with ID of `yo-man`                                                       
+ `http://example.com#.brah`         | first element with class of `brah`                                                      
+ `http://example.com#.sup.brah`     | first element with class of `sup` and `brah`                                            
+ `http://example.com#.sup.brah|100` | first element with class of `sup` and `brah`, scrolled to in 100ms (default is 750ms)                                             
+ `http://example.com#footer`        | element with ID of or anchor with name of footer, or first `footer`  
+ `http://example.com#footer|200`    | same as above, scrolled to in 200ms 
  
  
 ### On the web

@@ -27,7 +27,11 @@
   })
 
   function scrollToHash(){
-    var hash    = window.location.hash.substring(1);
+    var anchorTuple = window.location.hash.substring(1)
+                                          .split("|");
+
+    var hash          = anchorTuple[0];
+    var animationTime = anchorTuple[1] || 750;
 
     // What are valid values for the id attribute.
     // http://stackoverflow.com/questions/70579/what-are-valid-values-for-the-id-attribute-in-html
@@ -48,10 +52,10 @@
       return;
     }
 
-    // Scroll to $el
+    // Scroll to $el.
     if ( $el && $el.length > 0 ) {
       var top = $el.offset().top;
-      $body.animate({ scrollTop: top }, 750)
+      $body.stop().animate({ scrollTop: top }, parseInt(animationTime) )
     }
   }
 
