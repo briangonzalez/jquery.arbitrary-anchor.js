@@ -8,7 +8,7 @@
 
   "use strict";
 
-  var $window, $document, $body;
+  var $window, $document, $body, $html;
   var animationLength = 750;
 
   // Document ready?
@@ -19,6 +19,7 @@
     $window   = $(window);
     $document = $(this);
     $body     = $document.find('body');
+    $html     = $document.find('html');
 
     // Scroll to the anchor on initial page load.
     scrollToHash();
@@ -55,7 +56,7 @@
     // Scroll to $el.
     if ( $el && $el.length > 0 ) {
       var top = $el.offset().top;
-      $body.stop().animate({ scrollTop: top }, parseInt(animationTime) )
+      $body.add( $html ).stop().animate({ scrollTop: top }, parseInt(animationTime) )
     }
   }
 
