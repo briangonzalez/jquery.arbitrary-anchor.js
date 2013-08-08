@@ -15,8 +15,8 @@ __Add to your page:__
 __Use:__
 
 Then you can add any valid jQuery/CSS selector after the hash (`#`) in your page's URL, and it will automatically be scrolled to. 
-If the selector returns more than 1 element, the first element found will be scrolled to. You can also place a pipe (`|`) after the selector to change the 
-time it take to scroll to the given element, e.g. `#.mydiv|200` would scroll to the first element with a class of `mydiv` and it would scroll to it
+If the selector returns more than 1 element, the first element found will be scrolled to. You can also place a pipe (`|`) with a value in milliseconds after the selector to change the 
+time it takes to scroll to the given element, e.g. `#.mydiv|200` would scroll to the first element with a class of `mydiv` and it would scroll to it
 in 200ms.
 
 
