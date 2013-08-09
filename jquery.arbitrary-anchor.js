@@ -8,7 +8,7 @@
 
   "use strict";
 
-  var $window, $document, $body, $html;
+  var $window, $document, $body, $html, $bodhtml;
   var animationLength = 750;
 
   // Document ready?
@@ -20,10 +20,18 @@
     $document = $(this);
     $body     = $document.find('body');
     $html     = $document.find('html');
+    $bodhtml  = $body.add( $html );  
 
     // Scroll to the anchor on initial page load.
     scrollToHash();
-    $window.on('hashchange', function(){ scrollToHash(); })
+    $window.on('hashchange', scrollToHash);
+
+    // Cancel scroll if user interacts with page.
+    $window.on('mousewheel DOMMouseScroll touchstart mousedown MSPointerDown', function(ev){
+      // the true clears the queue
+      // the false disables jump-to-end 
+      $bodhtml.stop(true, false);  
+    });
 
   })
 
@@ -34,7 +42,7 @@
     var hash          = anchorTuple[0];
     var animationTime = anchorTuple[1] || 750;
 
-    // What are valid values for the id attribute.
+    // What are valid values for the id attribute?
     // http://stackoverflow.com/questions/70579/what-are-valid-values-for-the-id-attribute-in-html
     if ( hash.charAt(0).search(/[A-Za-z]/) > -1 )
       var $actualID         = $( "#" + hash);
@@ -56,7 +64,10 @@
     // Scroll to $el.
     if ( $el && $el.length > 0 ) {
       var top = $el.offset().top;
-      $body.add( $html ).stop().animate({ scrollTop: top }, parseInt(animationTime) )
+
+      $bodhtml.stop(true, false)
+              .animate({ scrollTop: top },  parseInt(animationTime) );
+
     }
   }
 
