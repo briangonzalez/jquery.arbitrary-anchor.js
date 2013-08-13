@@ -27,7 +27,9 @@
 
     // Select all anchors that have an href 
     // that starts with `#`  
-    $('a[href^="#"]').on('click', scrollToHash)
+    $('a[href^="#"]').on('click', function(){
+      scrollToHash( $(this).attr('href') )
+    })
 
     // Cancel scroll if user interacts with page.
     $window.on('mousewheel DOMMouseScroll touchstart mousedown MSPointerDown', function(ev){
@@ -38,12 +40,14 @@
 
   })
 
-  function scrollToHash(){
-    var anchorTuple = window.location.hash.substring(1)
-                                          .split("|");
+  function scrollToHash(rawHash){
+    var rawHash       = rawHash || window.location.hash;
+    var anchorTuple   = rawHash.substring(1)
+                               .split("|");
 
     var hash          = anchorTuple[0];
     var animationTime = anchorTuple[1] || 750;
+
 
     // What are valid values for the id attribute?
     // http://stackoverflow.com/questions/70579/what-are-valid-values-for-the-id-attribute-in-html
