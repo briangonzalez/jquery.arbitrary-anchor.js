@@ -24,7 +24,10 @@
 
     // Scroll to the anchor on initial page load.
     scrollToHash();
-    $window.on('hashchange', scrollToHash);
+
+    // Select all anchors that have an href 
+    // that starts with `#`  
+    $('a[href^="#"]').on('click', scrollToHash)
 
     // Cancel scroll if user interacts with page.
     $window.on('mousewheel DOMMouseScroll touchstart mousedown MSPointerDown', function(ev){
