@@ -10,7 +10,7 @@ Usage is simple. Just drop it into your page's `head` after jQuery. Then it just
 
 __Add to your page:__
 ```html
-  <script type="text/javascript" src="jquery.arbitrary-anchor.js"></script>
+<script type="text/javascript" src="jquery.arbitrary-anchor.js"></script>
 ```
 __Use:__
 
