@@ -50,6 +50,7 @@
     var $actualAnchor     = $('a[name="'+ hash +'"]');
 
     // Let the browser handle the default types of anchors.
+    // http://stackoverflow.com/questions/484719/html-anchors-with-name-or-id
     if ( ($actualAnchor && $actualAnchor.length > 0) || ($actualID && $actualID.length > 0) )
       return;
 
