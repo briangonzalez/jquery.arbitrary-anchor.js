@@ -26,9 +26,21 @@
     scrollToHash();
 
     // Select all anchors that have an href 
-    // that starts with `#`  
+    // that starts with `#`.
     $('a[href^="#"]').on('click', function(){
-      scrollToHash( $(this).attr('href') )
+      var href = $(this).attr('href');
+
+      // only scroll to element if href is equal 
+      // to hash; we'll let hashchange event 
+      // handle everything else
+      if ( href === window.location.hash )
+        scrollToHash( href )
+    })
+
+    // Scroll to the object when hashchange event
+    // is triggered on the window.
+    $window.on('hashchange', function(){
+      scrollToHash();
     })
 
     // Cancel scroll if user interacts with page.
