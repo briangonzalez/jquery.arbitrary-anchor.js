@@ -12,7 +12,6 @@ __Add to your page:__
 ```html
 <script type="text/javascript" src="jquery.arbitrary-anchor.js"></script>
 ```
-__Use:__
 
 Then you can add any valid jQuery/CSS selector after the hash (`#`) in your page's URL, and it will automatically be scrolled to. 
 If the selector returns more than 1 element, the first element found will be scrolled to. You can also place a pipe (`|`) with a value in milliseconds after the selector to change the 
