@@ -18,22 +18,28 @@
     // Grab our elements.
     $window   = $(window);
     $document = $(this);
-    $body     = $document.find('body');
-    $html     = $document.find('html');
+    $body     = $(document.body);
+    $html     = $(document.documentElement);
     $bodhtml  = $body.add( $html );  
 
     // Scroll to the anchor on initial page load.
     scrollToHash();
 
     // Select all anchors that have an href 
-    // that starts with `#`.
-    $('a[href^="#"]').on('click', function(){
+    // that contains `#`.
+    $document.find('a[href^="#"], a[href^="."]').on('click', function(){
       var href = $(this).attr('href');
+
+      if( href.charAt(0) === '.' ){
+        href = href.split('#');
+        href.shift();
+        href = '#' + href.join('#');
+      }
 
       // only scroll to element if href is equal 
       // to hash; we'll let hashchange event 
       // handle everything else
-      if ( href === window.location.hash )
+      if ( href === location.hash )
         scrollToHash( href )
     })
 
