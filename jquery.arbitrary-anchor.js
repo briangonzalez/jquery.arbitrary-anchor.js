@@ -59,36 +59,35 @@
   })
 
   function scrollToHash(rawHash){
-    var rawHash       = rawHash || window.location.hash;
+    var rawHash       = rawHash || location.hash;
     var anchorTuple   = rawHash.substring(1)
                                .split("|");
 
     var hash          = anchorTuple[0];
     var animationTime = anchorTuple[1] || 750;
 
-
     // What are valid values for the id attribute?
     // http://stackoverflow.com/questions/70579/what-are-valid-values-for-the-id-attribute-in-html
     if ( hash.charAt(0).search(/[A-Za-z]/) > -1 )
-      var $actualID         = $( "#" + hash);
+      var $actualID         = $document.find( "#" + hash );
 
-    var $actualAnchor     = $('a[name="'+ hash +'"]');
+    var $actualAnchor     = $document.find('a[name="'+ hash +'"]');
 
     // Let the browser handle the default types of anchors.
     // http://stackoverflow.com/questions/484719/html-anchors-with-name-or-id
-    if ( ($actualAnchor && $actualAnchor.length > 0) || ($actualID && $actualID.length > 0) )
+    if ( ( $actualAnchor && $actualAnchor.length ) || ( $actualID && $actualID.length ) )
       return;
 
     // Store the arbitrary anchor element.
     var $arbitraryAnchor  = $(hash).first();
-    if ( $arbitraryAnchor && $arbitraryAnchor.length > 0 ) {
+    if ( $arbitraryAnchor && $arbitraryAnchor.length ) {
       var $el = $arbitraryAnchor;      
     } else {
       return;
     }
 
     // Scroll to $el.
-    if ( $el && $el.length > 0 ) {
+    if ( $el && $el.length ) {
       var top = $el.offset().top;
 
       $bodhtml.stop(true, false)
