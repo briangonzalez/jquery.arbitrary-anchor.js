@@ -33,7 +33,7 @@ in 200ms.
  
 
 ### Custom Easing Functions
-You can easily change arbitrary anchor's easing function, which defaults to `linear`. Once you've added [jquery easing functions](http://gsgd.co.uk/sandbox/jquery/easing/) to your page, change the easing function by changing the global config variable:
+You can easily change arbitrary anchor's easing function, which defaults to `linear`. Once you've added the [jquery easing plugin](http://gsgd.co.uk/sandbox/jquery/easing/) to your page, change the easing function by setting the global configuration variable:
 
 ```javascript
 AA_CONFIG.easingFunction = 'easeOutBounce';
