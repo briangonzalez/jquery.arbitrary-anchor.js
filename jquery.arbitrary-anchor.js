@@ -9,7 +9,11 @@
   "use strict";
 
   var $window, $document, $body, $html, $bodhtml;
-  var animationLength = 750;
+
+  window.AA_CONFIG = {
+    animationLength:  750,
+    easingFunction:   'linear'
+  };
 
   // Document ready?
   // Well then do the magic.
@@ -64,7 +68,7 @@
                                .split("|");
 
     var hash          = anchorTuple[0];
-    var animationTime = anchorTuple[1] || 750;
+    var animationTime = anchorTuple[1] || window.AA_CONFIG.animationLength;
 
     // What are valid values for the id attribute?
     // http://stackoverflow.com/questions/70579/what-are-valid-values-for-the-id-attribute-in-html
@@ -91,7 +95,7 @@
       var top = $el.offset().top;
 
       $bodhtml.stop(true, false)
-              .animate({ scrollTop: top },  parseInt(animationTime) );
+              .animate({ scrollTop: top },  parseInt(animationTime), window.AA_CONFIG.easingFunction );
 
     }
   }

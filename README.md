@@ -18,7 +18,6 @@ If the selector returns more than 1 element, the first element found will be scr
 time it takes to scroll to the given element, e.g. `#.mydiv|200` would scroll to the first element with a class of `mydiv` and it would scroll to it
 in 200ms.
 
-
 ### Example URLs
 
  URL                                | Scrolls To                                                                              
@@ -32,6 +31,23 @@ in 200ms.
  `http://example.com#footer`        | element with ID of or anchor with name of `footer`, or first `<footer>` element  
  `http://example.com#footer｜200`    | same as above, scrolled to in 200ms 
  
+
+### Custom Easing Functions
+You can easily change arbitrary anchor's easing function, which defaults to `linear`. Once you've added [jquery easing functions](http://gsgd.co.uk/sandbox/jquery/easing/) to your page, change the easing function by changing the global config variable:
+
+```javascript
+AA_CONFIG.easingFunction = 'easeOutBounce';
+```
+
+### Other options
+Here are the AA's options, with their defaults:
+
+```javascript
+AA_CONFIG = {
+  animationLength:  750,
+  easingFunction:   'linear'
+};
+```
  
 ### On the web
 
