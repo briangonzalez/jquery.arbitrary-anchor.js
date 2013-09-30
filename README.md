@@ -48,7 +48,3 @@ AA_CONFIG = {
   easingFunction:   'linear'
 };
 ```
- 
-### On the web
-
-On the web at [http://briangonzalez.org/arbitrary-anchor](http://briangonzalez.org/arbitrary-anchor) or find me [@brianmgonzalez](http://twitter.com/brianmgonzalez).
