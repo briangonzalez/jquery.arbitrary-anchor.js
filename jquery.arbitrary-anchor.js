@@ -10,10 +10,12 @@
 
   var $window, $document, $body, $html, $bodhtml;
 
-  window.AA_CONFIG = {
+  // Initialize the defaults
+  window.AA_CONFIG = window.AA_CONFIG || {};
+  window.AA_CONFIG = $.extend({
     animationLength:  750,
     easingFunction:   'linear'
-  };
+  }, window.AA_CONFIG );
 
   // Document ready?
   // Well then do the magic.
