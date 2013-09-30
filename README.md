@@ -51,5 +51,4 @@ AA_CONFIG = {
  
 ### On the web
 
-Visit us at [http://briangonzalez.org/arbitrary-anchor](http://briangonzalez.org/arbitrary-anchor)
- 
+On the web at [http://briangonzalez.org/arbitrary-anchor](http://briangonzalez.org/arbitrary-anchor) or find me [@brianmgonzalez](http://twitter.com/brianmgonzalez).
