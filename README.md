@@ -40,7 +40,7 @@ AA_CONFIG.easingFunction = 'easeOutBounce';
 ```
 
 ### Other options
-Here are the AA's options, with their defaults:
+Here are the options, with their defaults:
 
 ```javascript
 AA_CONFIG = {
@@ -48,3 +48,9 @@ AA_CONFIG = {
   easingFunction:   'linear'
 };
 ```
+
+### Author
+
+| ![twitter/brianmgonzalez](http://gravatar.com/avatar/f6363fe1d9aadb1c3f07ba7867f0e854?s=70](http://twitter.com/brianmgonzalez "Follow @brianmgonzalez on Twitter") |
+|---|
+| [Brian Gonzalez](http://briangonzalez.org) |
