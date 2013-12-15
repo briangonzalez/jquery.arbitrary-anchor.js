@@ -14,7 +14,8 @@
   window.AA_CONFIG = window.AA_CONFIG || {};
   window.AA_CONFIG = $.extend({
     animationLength:  750,
-    easingFunction:   'linear'
+    easingFunction:   'linear',
+    scrollOffset:     0
   }, window.AA_CONFIG );
 
   // Document ready?
@@ -94,7 +95,7 @@
 
     // Scroll to $el.
     if ( $el && $el.length ) {
-      var top = $el.offset().top;
+      var top = $el.offset().top - window.AA_CONFIG.scrollOffset;
 
       $bodhtml.stop(true, false)
               .animate({ scrollTop: top },  parseInt(animationTime), window.AA_CONFIG.easingFunction );

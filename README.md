@@ -45,7 +45,8 @@ Here are the options, with their defaults:
 ```javascript
 AA_CONFIG = {
   animationLength:  750,
-  easingFunction:   'linear'
+  easingFunction:   'linear',
+  scrollOffset:     0
 };
 ```
 
