@@ -1,0 +1,23 @@
+GEM
+  specs:
+    breakpoint (2.0.7)
+      compass (>= 0.12.1)
+      sass (>= 3.2.0)
+    breakpoint-slicer (1.3.4)
+      breakpoint (>= 2.0.1)
+      compass (>= 0.12.2)
+      sass (>= 3.2.1)
+    chunky_png (1.3.1)
+    compass (0.12.6)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.2.19)
+    fssm (0.2.10)
+    sass (3.2.19)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  breakpoint-slicer
+  compass (~> 0.12.6)

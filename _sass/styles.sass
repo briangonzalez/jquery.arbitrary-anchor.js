@@ -1,0 +1,110 @@
+
+@import 'compass'
+@import 'breakpoint-slicer'
+@import './normalize'
+
+$base-font-size:              16px
+$base-line-height:            16px
+$round-to-nearest-half-line:  true
+$rhythm-unit:                 "rem"
+
+@include establish-baseline
+
+//
+// BP Slicer
+//
+
+$slicer-breakpoints:        0        320px       768px       1024px
+
+//                          └────┬────┘ └────┬────┘ └────┬────┘
+// Slice numbers:                1           2           3
+
+
+//
+// Fonts
+// -----------
+$font-abril:  'Abril Fatface', cursive
+$font-roboto: 'Roboto', sans-serif
+
+// Colors
+// ---------
+
+$color-yellow:    #F7EDCA
+$color-dark-gray: #444647
+
+// Other Styles
+// ------------
+
+html
+
+  body
+    color: white
+    font-family: $font-roboto
+    font-size: 300
+    background: url('/assets/bg.jpg')  center center no-repeat fixed
+    background-size: cover
+
+    &:before
+      content: ''
+      position: fixed
+      top: 3px
+      bottom: 3px
+      left: rhythm(2)
+      width: 1px
+      background: rgba(white, 0.3)
+
+    *
+      box-sizing: border-box
+
+    main.content
+      +rhythm(0, 35, 10, 0)
+      max-width: 550px
+      margin-left: rhythm(5)
+      padding-left: rhythm(1)
+      padding-right: rhythm(1)
+      width: 100%
+
+      h1.title
+        +adjust-font-size-to(30px)
+        +rhythm(0, 0, 0, 1)
+        font-family: $font-abril
+        text-transform: uppercase
+        font-weight: 400
+
+        +from(2)
+          +adjust-font-size-to(50px)
+
+
+      h2
+        +adjust-font-size-to(26px)
+        color: $color-yellow
+        text-transform: uppercase
+
+      button
+        +adjust-font-size-to(0.75rem)
+        padding: rhythm(0.25) rhythm(0.75)
+        border: 1px solid rgba(white, 0.5)
+        background: none
+        color: white
+        cursor: pointer
+        border-radius: 4px
+        font-family: $font-roboto
+        transition: all 0.5s ease
+
+        &:hover
+          box-shadow: 0 0 3px white
+          background: white
+          color: $color-dark-gray
+
+      section, footer, .button-bar
+        margin-bottom: rhythm(30)
+
+      p
+        +adjust-leading-to(1.6)
+
+      footer
+        border-top: 1px solid rgba(white, 0.5)
+
+      a, a:hover, a:active, a:visited
+        color: white
+
