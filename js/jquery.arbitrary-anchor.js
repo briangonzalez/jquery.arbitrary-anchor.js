@@ -60,8 +60,7 @@
 
     // Cancel scroll if user interacts with page.
     $window.on('mousewheel DOMMouseScroll touchstart mousedown MSPointerDown', function(ev){
-      // the true clears the queue
-      // the false disables jump-to-end
+      // the true clears the queue, the false disables jump-to-end
       $bodhtml.stop(true, false);
     });
 

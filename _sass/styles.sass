@@ -29,8 +29,8 @@ $font-roboto: 'Roboto', sans-serif
 // Colors
 // ---------
 
-$color-yellow:    #F7EDCA
-$color-dark-gray: #444647
+$color-yellow:     #FFFFCB
+$color-dark-gray:  #444647
 
 // Other Styles
 // ------------
@@ -41,46 +41,68 @@ html
     color: white
     font-family: $font-roboto
     font-size: 300
-    background: url('/assets/bg.jpg')  center center no-repeat fixed
-    background-size: cover
 
     &:before
       content: ''
       position: fixed
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: url('/assets/bg.jpg')  50% 0 no-repeat
+      background-size: cover
+      z-index: -1
+
+    &:after
+      content: ''
+      position: fixed
       top: 3px
       bottom: 3px
-      left: rhythm(2)
+      left: rhythm(0.5)
       width: 1px
       background: rgba(white, 0.3)
+
+      +from(3)
+        left: rhythm(2)
 
     *
       box-sizing: border-box
 
     main.content
-      +rhythm(0, 35, 10, 0)
-      max-width: 550px
-      margin-left: rhythm(5)
-      padding-left: rhythm(1)
-      padding-right: rhythm(1)
+      +rhythm(0, 8, 10, 0)
+      max-width: 600px
+      padding-left: rhythm(1.5)
+      padding-right: rhythm(1.5)
       width: 100%
+      margin-left: 0
+
+      +from(3)
+        margin-left: rhythm(5)
+        +rhythm(0, 35, 10, 0)
+
+      .anchor
+        position: fixed
+        bottom: rhythm(1)
+        right: rhythm(1)
+        width: 25px
+        opacity: 0.25
 
       h1.title
-        +adjust-font-size-to(30px)
+        +adjust-font-size-to(40px)
         +rhythm(0, 0, 0, 1)
         font-family: $font-abril
         text-transform: uppercase
         font-weight: 400
 
-        +from(2)
+        +from(3)
           +adjust-font-size-to(50px)
-
 
       h2
         +adjust-font-size-to(26px)
-        color: $color-yellow
-        text-transform: uppercase
+        color: $color-dark-gray - 10
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25)
 
-      button
+      button, .button
         +adjust-font-size-to(0.75rem)
         padding: rhythm(0.25) rhythm(0.75)
         border: 1px solid rgba(white, 0.5)
@@ -90,21 +112,43 @@ html
         border-radius: 4px
         font-family: $font-roboto
         transition: all 0.5s ease
+        outline: none
+        margin-right: rhythm(0.5)
+        margin-bottom: rhythm(0.25)
+        text-decoration: none
+        display: inline-block
+        float: left
+
+        &:active, &:visited
+          color: white
 
         &:hover
           box-shadow: 0 0 3px white
           background: white
           color: $color-dark-gray
 
-      section, footer, .button-bar
+      section, .button-bar
         margin-bottom: rhythm(30)
 
       p
         +adjust-leading-to(1.6)
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25)
+        font-size: 300
+        color: $color-dark-gray
 
       footer
         border-top: 1px solid rgba(white, 0.5)
 
       a, a:hover, a:active, a:visited
-        color: white
+        color: $color-dark-gray + 5
+        text-decoration: none
 
+      a
+        border-bottom: 1px solid $color-dark-gray
+
+      code
+        color: $color-dark-gray
+        background: rgba(255, 255, 255, 0.5)
+        padding: 3px
+        margin: 2px
+        border-radius: 2px

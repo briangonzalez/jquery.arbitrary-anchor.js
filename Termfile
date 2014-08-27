@@ -1,0 +1,11 @@
+root:
+  ~/code/github/jquery.arbitrary-anchor.js
+
+commands:
+  git:          git st
+  jekyll:       jekyll serve --watch --port 4200
+  compass:      compass watch
+
+layout:
+  - [ here, there ]
+  - [ jekyll, compass ]
