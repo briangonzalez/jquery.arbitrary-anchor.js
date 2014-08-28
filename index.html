@@ -4,28 +4,32 @@ layout: default
 
 <main class='content' role='main'>
 
-  <!-- Anchor. -->
-  <img class='anchor' src="assets/anchor.svg">
+  <section class='top'>
 
-  <!-- Title. -->
-  <h1 class='title'>
-    Arbitrary Anchor
-  </h1>
+    <!-- Title. -->
+    <h1 class='title'>
+      Arbitrary Anchor
 
-  <div class='button-bar'>
-    <a class='button'>Tweet</a>
-    <a class='button' href='https://github.com/briangonzalez/jquery.arbitrary-anchor.js'>Github</a>
-    <a class='button' href='#.about'>About</a>
-  </div>
+      <a href="#body" class='anchor'>
+        <img src="assets/anchor.svg">
+      </a>
 
+    </h1>
+
+    <p class='tagline'>
+      Anchor to <a href="#.about">any element</a> on the page with a little jQuery Magic
+    </p>
+
+  </section>
 
   <!-- About Section -->
   <section>
     <h2 class='about'>What is jquery.arbitrary-anchor.js?</h2>
     <p>
-      With <a href="#.title">jquery.arbitrary-anchor.js</a>, you can easily create useful and neat dynamic anchor scrolling by simply adding a jQuery/CSS selector after the hash (<code>#</code>) to your page's URL. This plugin extends the normal anchor functionality, that is, an anchor tag with a <code>name</code> value attribute will still get scrolled to as normal. The same goes for an element with an ID which matches the hash. This little plugin will take care of the rest. Click the button below and watch what the URL in your browser. Go ahead!
+      Easily create neat anchor scrolling by simply adding a jQuery/CSS selector after the hash to your page's URL. This plugin extends the normal anchor functionality: an anchor tag with a <code>name</code> value attribute will still get scrolled to as normal. The same goes for an element with an ID which matches the hash. This little plugin will take care of the rest.
     </p>
     <div>
+      <a class='button' href='https://github.com/briangonzalez/jquery.arbitrary-anchor.js'>Code on Github</a>
       <a class='button' href='#.how-to-use'>How to Use</a>
     </div>
   </section>
@@ -38,8 +42,8 @@ layout: default
       Add jQuery to your page, then grab <a href="https://github.com/briangonzalez/jquery.arbitrary-anchor.js">jquery.arbitrary-anchor.js</a> and add it to your page. Note, this page here is also good example of how to use this plugin. <a href="">View this page's source.</a>
     </p>
     <div>
-      <a class='button' href='https://github.com/briangonzalez/jquery.arbitrary-anchor.js'>More on Github</a>
       <a class='button' href='#.on-the-web'>Find me on the web</a>
+      <a class='button' href='#body'>To the Top</a>
     </div>
   </section>
 
@@ -47,6 +51,9 @@ layout: default
   <!-- Find me on the Web. -->
   <section>
     <h2 class='on-the-web'>Find me on the web</h2>
+    <p>
+      Please say hello.
+    </p>
     <div>
       <a class='button' href='http://briangonzalez.org'>Site</a>
       <a class='button' href='http://twitter.com/brianmgonzalez'>Twitter</a>

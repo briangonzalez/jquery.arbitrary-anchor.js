@@ -3,7 +3,7 @@
 @import 'breakpoint-slicer'
 @import './normalize'
 
-$base-font-size:              16px
+$base-font-size:              18px
 $base-line-height:            16px
 $round-to-nearest-half-line:  true
 $rhythm-unit:                 "rem"
@@ -31,6 +31,7 @@ $font-roboto: 'Roboto', sans-serif
 
 $color-yellow:     #FFFFCB
 $color-dark-gray:  #444647
+$color-blue:       #94e7e6
 
 // Other Styles
 // ------------
@@ -78,25 +79,51 @@ html
       margin-left: 0
 
       +from(3)
-        margin-left: rhythm(5)
-        +rhythm(0, 35, 10, 0)
+        margin-left: rhythm(10)
+        +rhythm(0, 25, 10, 0)
 
-      .anchor
-        position: fixed
-        bottom: rhythm(1)
-        right: rhythm(1)
-        width: 25px
-        opacity: 0.25
+      section.top
 
-      h1.title
-        +adjust-font-size-to(40px)
-        +rhythm(0, 0, 0, 1)
-        font-family: $font-abril
-        text-transform: uppercase
-        font-weight: 400
 
-        +from(3)
-          +adjust-font-size-to(50px)
+
+        h1.title
+          +adjust-font-size-to(40px)
+          +rhythm(0, 0, 0, 0.5)
+          font-family: $font-abril
+          text-transform: uppercase
+          font-weight: 400
+
+          +from(3)
+            position: relative
+            +adjust-font-size-to(50px)
+
+          .anchor
+            position: absolute
+            border: 0
+            top: rhythm(0.5)
+            right: rhythm(0.5)
+
+            img
+              height: rhythm(1.5)
+
+            +from(3)
+              left: - rhythm(5)
+              top: rhythm(0.5)
+
+              img
+                height: rhythm(3)
+
+        .tagline
+          +adjust-font-size-to(16px)
+          margin-top: 0
+          color: white
+          padding-left: rhythm(0.25)
+          text-shadow: 0 0px 4px rgba(black, 0.25)
+
+          a
+            color: beige
+            border-color: beige
+
 
       h2
         +adjust-font-size-to(26px)
@@ -106,33 +133,32 @@ html
       button, .button
         +adjust-font-size-to(0.75rem)
         padding: rhythm(0.25) rhythm(0.75)
-        border: 1px solid rgba(white, 0.5)
+        border: 1px solid rgba($color-dark-gray, 0.5)
         background: none
-        color: white
+        color: $color-dark-gray
         cursor: pointer
         border-radius: 4px
         font-family: $font-roboto
-        transition: all 0.5s ease
+        transition: all 0.1s ease
         outline: none
         margin-right: rhythm(0.5)
-        margin-bottom: rhythm(0.25)
+        margin-bottom: rhythm(0.5)
         text-decoration: none
         display: inline-block
         float: left
 
         &:active, &:visited
-          color: white
+          color: $color-dark-gray
 
         &:hover
-          box-shadow: 0 0 3px white
-          background: white
-          color: $color-dark-gray
+          border-color: white
+          color: white
 
       section, .button-bar
         margin-bottom: rhythm(30)
 
       p
-        +adjust-leading-to(1.6)
+        +adjust-leading-to(1.9)
         text-shadow: 0 1px 1px rgba(white, 0.25)
         font-size: 300
         color: $color-dark-gray
@@ -145,7 +171,7 @@ html
         text-decoration: none
 
       a
-        border-bottom: 1px solid $color-dark-gray
+        border-bottom: 1px solid rgba($color-dark-gray, 0.3)
 
       code
         color: $color-dark-gray
