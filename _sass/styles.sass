@@ -84,8 +84,6 @@ html
 
       section.top
 
-
-
         h1.title
           +adjust-font-size-to(40px)
           +rhythm(0, 0, 0, 0.5)
@@ -101,7 +99,7 @@ html
             position: absolute
             border: 0
             top: rhythm(0.5)
-            right: rhythm(0.5)
+            right: rhythm(1)
 
             img
               height: rhythm(1.5)
@@ -153,6 +151,24 @@ html
         &:hover
           border-color: white
           color: white
+
+        &.fixed
+          position: absolute
+          bottom: rhythm(1)
+          right: rhythm(1)
+          padding: 3px 8px
+          border: 1px solid rgba(white, 0.5)
+          color: rgba(white, 0.5)
+          margin-right: 0
+
+          +from(3)
+            bottom: auto
+            top: rhythm(1)
+
+          &:hover
+            color: rgba(white, 1)
+            border-color: rgba(white, 1)
+
 
       section, .button-bar
         margin-bottom: rhythm(30)
