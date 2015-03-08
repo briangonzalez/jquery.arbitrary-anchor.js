@@ -1,4 +1,4 @@
-# <img src="http://briangonzalez.org/uploads/jqueryaa-anchor.svg" width=25 style="margin-right: 10px"> jquery.arbitrary-anchor.js
+# jquery.arbitrary-anchor.js
 
 This plugin allows the page to scroll to any arbitrary object on the page based on jQuery/CSS selector. 
 
