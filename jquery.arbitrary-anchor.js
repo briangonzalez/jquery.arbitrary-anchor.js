@@ -1,6 +1,6 @@
 ;(function(window, $){
 
-  // Copyright Brian Gonzalez - 2013
+  // Copyright Brian Gonzalez - 2015
   // jquery.arbitrary-anchor.js
   // Arbitrary anchors for any element on your page using a little jQuery magic.
   // briangonzalez.org/arbitrary-anchor
