@@ -78,7 +78,8 @@
     if ( hash.charAt(0).search(/[A-Za-z]/) > -1 )
       var $actualID         = $document.find( "#" + hash );
 
-    var $actualAnchor     = $document.find('a[name="'+ hash +'"]');
+    // Prevents dom-xss
+    var $actualAnchor     = document.querySelectorAll('a[name="'+ hash +'"]');
 
     // Let the browser handle the default types of anchors.
     // http://stackoverflow.com/questions/484719/html-anchors-with-name-or-id
@@ -86,7 +87,8 @@
       return;
 
     // Store the arbitrary anchor element.
-    var $arbitraryAnchor  = $(hash).first();
+    // Prevents dom-xss
+    var $arbitraryAnchor  = $(document.querySelectorAll(hash)[0]);
     if ( $arbitraryAnchor && $arbitraryAnchor.length ) {
       var $el = $arbitraryAnchor;      
     } else {
