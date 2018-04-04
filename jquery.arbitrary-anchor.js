@@ -73,34 +73,36 @@
     var hash          = anchorTuple[0];
     var animationTime = anchorTuple[1] || window.AA_CONFIG.animationLength;
 
-    // What are valid values for the id attribute?
-    // http://stackoverflow.com/questions/70579/what-are-valid-values-for-the-id-attribute-in-html
-    if ( hash.charAt(0).search(/[A-Za-z]/) > -1 )
+    try {
+      // What are valid values for the id attribute?
+      // http://stackoverflow.com/questions/70579/what-are-valid-values-for-the-id-attribute-in-html
+      if ( hash.charAt(0).search(/[A-Za-z]/) > -1 )
       var $actualID         = $document.find( "#" + hash );
 
-    var $actualAnchor     = $document.find('a[name="'+ hash +'"]');
+      var $actualAnchor     = $document.find('a[name="'+ hash +'"]');
 
-    // Let the browser handle the default types of anchors.
-    // http://stackoverflow.com/questions/484719/html-anchors-with-name-or-id
-    if ( ( $actualAnchor && $actualAnchor.length ) || ( $actualID && $actualID.length ) )
-      return;
+      // Let the browser handle the default types of anchors.
+      // http://stackoverflow.com/questions/484719/html-anchors-with-name-or-id
+      if ( ( $actualAnchor && $actualAnchor.length ) || ( $actualID && $actualID.length ) )
+        return;
 
-    // Store the arbitrary anchor element.
-    var $arbitraryAnchor  = $(hash).first();
-    if ( $arbitraryAnchor && $arbitraryAnchor.length ) {
-      var $el = $arbitraryAnchor;      
-    } else {
-      return;
-    }
+      // Store the arbitrary anchor element.
+      var $arbitraryAnchor  = $(hash).first();
+      if ( $arbitraryAnchor && $arbitraryAnchor.length ) {
+        var $el = $arbitraryAnchor;      
+      } else {
+        return;
+      }
 
-    // Scroll to $el.
-    if ( $el && $el.length ) {
-      var top = $el.offset().top - window.AA_CONFIG.scrollOffset;
+      // Scroll to $el.
+      if ( $el && $el.length ) {
+        var top = $el.offset().top - window.AA_CONFIG.scrollOffset;
 
-      $bodhtml.stop(true, false)
-              .animate({ scrollTop: top },  parseInt(animationTime), window.AA_CONFIG.easingFunction );
+        $bodhtml.stop(true, false)
+                .animate({ scrollTop: top },  parseInt(animationTime), window.AA_CONFIG.easingFunction );
 
-    }
+      }
+    }catch(err) {}
   }
 
 })(window, jQuery)
