@@ -105,4 +105,4 @@
     }catch(err) {}
   }
 
-})(window, jQuery)
+})(window, jQuery);
